@@ -2,8 +2,8 @@
   "manifest_version": 2,
 
   "name": "Comic Sans Extension",
-  "description": "Changes all fonts on all webpages into Comic Sans",
-  "version": "0.0.1",
+  "description": "Changes all text on all webpages into Comic Sans",
+  "version": "1.0.0",
 	
 	"content_scripts": [
 		{
