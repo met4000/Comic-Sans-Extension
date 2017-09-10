@@ -1,1 +1,15 @@
-(function(){function i(e){for(var n=0,e=e.children;n<e.length;n++)t.push(e[n].tagName.toLowerCase()),e[n].childElementCount?i(e[n]):t.indexOf(e[n].tagName.toLowerCase())}var t=[];r=document.createElement("style"),r.innerHTML="@font-face{font-family:'Comic Sans';src:'https://github.com/met4000/Comic-Sans-Extension/raw/master/comic.ttf' format('truetype');}",document.head.append(r),i(document.body),t.forEach(function(t){var e=document.createElement("style");e.innerHTML=t+"{font-family:'Comic Sans','Comic San MS'!important}",document.head.append(e)});}())
+(function() {
+	function i(e) {
+		for (var n = 0, e = e.children; n < e.length; n++) {
+			if (t.indexOf(e[n].tagName.toLowerCase()) == -1)
+				t.push(e[n].tagName.toLowerCase());
+			if (e[n].childElementCount) i(e[n])
+		}
+	}
+	var t = [];
+	i(document.body);
+	t.forEach(function(t) {
+		var e = document.createElement("style");
+		e.innerHTML = t + "{font-family:'Comic Sans MS'!important}", document.head.append(e)
+	});
+}())
